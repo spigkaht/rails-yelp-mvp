@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-light justify-content-between p-4">
+  <a href="" class="navbar-brand">Melbourne Restaurants</a>
+  <%= link_to "New restaurant", new_restaurant_path, class: "btn btn-outline-success my-2 my-sm-0" %>
+</nav>
+
+<div class="container mt-1">
+  <h1>Melbourne Restaurants</h1>
+  <% @restaurants.each do |restaurant| %>
+    <h3>
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    </h3>
+    <p>
+      <%= restaurant.address %>
+    </p>
+  <% end %>
+</div>

@@ -1,0 +1,7 @@
+<h1>New review</h1>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+  <%= link_to "Cancel", restaurant_path(@restaurant), class: "btn btn-secondary ms-1" %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
